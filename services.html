@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Shivashakthi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-full-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            padding-bottom: 80px;
+        }
+
+        .service-detail-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            border-radius: 16px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .service-detail-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 243, 255, 0.1), transparent);
+            opacity: 0;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        .service-detail-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-detail-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .service-icon-large {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            background: -webkit-linear-gradient(var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-list {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .feature-list li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo text-gradient">Shivashakthi</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html" class="active">Services</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container fade-in" style="padding-top: 150px; padding-bottom: 60px; text-align: center;">
+        <h1 class="text-gradient" style="font-size: 3rem; margin-bottom: 20px;">Our Services</h1>
+        <p style="color: rgba(255,255,255,0.7); max-width: 700px; margin: 0 auto;">
+            Comprehensive digital solutions tailored to elevate your business. From concept to code, we deliver
+            excellence.
+        </p>
+    </div>
+
+    <section class="container services-full-grid">
+        <!-- Service 1 -->
+        <div class="service-detail-card fade-in">
+            <i class="fas fa-laptop-code service-icon-large"></i>
+            <h3>Front-End Development</h3>
+            <p style="color: rgba(255,255,255,0.6); margin-top: 15px;">
+                We build blazingly fast, responsive, and interactive user interfaces using modern JavaScript frameworks.
+            </p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check"></i> React.js, Vue.js, Next.js</li>
+                <li><i class="fas fa-check"></i> Single Page Applications (SPA)</li>
+                <li><i class="fas fa-check"></i> Progressive Web Apps (PWA)</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">Get Quote</a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-detail-card fade-in">
+            <i class="fas fa-layer-group service-icon-large"></i>
+            <h3>UI/UX Design</h3>
+            <p style="color: rgba(255,255,255,0.6); margin-top: 15px;">
+                User-centric design that balances aesthetics with functionality to drive engagement and retention.
+            </p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check"></i> Wireframing & Prototyping</li>
+                <li><i class="fas fa-check"></i> User Research</li>
+                <li><i class="fas fa-check"></i> Design Systems</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">Get Quote</a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-detail-card fade-in">
+            <i class="fas fa-mobile-alt service-icon-large"></i>
+            <h3>Responsive & Mobile</h3>
+            <p style="color: rgba(255,255,255,0.6); margin-top: 15px;">
+                Ensuring your specific digital presence looks flawless on every device, from 4K desktops to smartphones.
+            </p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check"></i> Mobile-First Approach</li>
+                <li><i class="fas fa-check"></i> Cross-Browser Compatibility</li>
+                <li><i class="fas fa-check"></i> Touch Optimization</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">Get Quote</a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-detail-card fade-in">
+            <i class="fas fa-tachometer-alt service-icon-large"></i>
+            <h3>Performance Optimization</h3>
+            <p style="color: rgba(255,255,255,0.6); margin-top: 15px;">
+                Speed matters. We optimize your existing sites for lightning-fast load times and better SEO rankings.
+            </p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check"></i> Code Minification</li>
+                <li><i class="fas fa-check"></i> Image Optimization</li>
+                <li><i class="fas fa-check"></i> Server-Side Rendering</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline" style="width: 100%; text-align: center;">Get Quote</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container"
+            style="text-align: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+            <p style="color: rgba(255,255,255,0.4);">&copy; 2026 Shivashakthi IT Solutions.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
